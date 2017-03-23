@@ -1,0 +1,194 @@
+{
+	"music":[
+		{
+			"name":"",
+			"src":"../../static/musiclist/1.jpg",
+			"desc":"吉他|气疯的日子流撒飘飘心情",
+			"user":"秋风",
+			"collect":14633,
+			"comment":434,
+			"share"	:80,
+			"musiclist":[
+				{
+					"name":"高尚",
+					"user":"薛之谦",
+					"special":"高尚",
+					"sq" : "true",
+					"movie":"true"
+				},
+				{
+					"name":"一瞬间",
+					"user":"张靓颖",
+					"special":"非诚勿扰 电影原生大碟",
+					"sq" : "true",
+					"movie":"false"
+				},
+				{
+					"name":"我又想起你",
+					"user":"江美琪",
+					"special":"又寂寞又美丽",
+					"sq" : "true",
+					"movie":"false"
+				},
+				{
+					"name":"我以为",
+					"user":"庄心妍",
+					"special":"我以为",
+					"sq" : "true",
+					"movie":"true"
+				},
+				{
+					"name":"爱就一个字",
+					"user":"张信哲",
+					"special":"从现在到开始",
+					"sq" : "false",
+					"movie":"true"
+				}
+			]
+		},
+		{
+			"name":"",
+			"src":"../../static/musiclist/2.jpg",
+			"desc":"吉他|气疯的日子流撒飘飘心情",
+			"user":"秋风",
+			"collect":14633,
+			"comment":434,
+			"share"	:80,
+			"musiclist":[
+				{
+					"name":"高尚",
+					"user":"薛之谦",
+					"special":"高尚",
+					"sq" : "true",
+					"movie":"true"
+				}
+			]
+		},
+		{
+			"name":"",
+			"src":"../../static/musiclist/3.jpg",
+			"desc":"吉他|气疯的日子流撒飘飘心情",
+			"user":"秋风",
+			"collect":14633,
+			"comment":434,
+			"share"	:80,
+			"musiclist":[
+				{
+					"name":"高尚",
+					"user":"薛之谦",
+					"special":"高尚",
+					"sq" : "true",
+					"movie":"true"
+				}
+			]
+		},
+		{
+			"name":"",
+			"src":"../../static/musiclist/4.jpg",
+			"desc":"吉他|气疯的日子流撒飘飘心情",
+			"user":"秋风",
+			"collect":14633,
+			"comment":434,
+			"share"	:80,
+			"musiclist":[
+				{
+					"name":"高尚",
+					"user":"薛之谦",
+					"special":"高尚",
+					"sq" : "true",
+					"movie":"true"
+				}
+			]
+		},
+		{
+			"name":"",
+			"src":"../../static/musiclist/5.jpg",
+			"desc":"吉他|气疯的日子流撒飘飘心情",
+			"user":"秋风",
+			"collect":14633,
+			"comment":434,
+			"share"	:80,
+			"musiclist":[
+				{
+					"name":"高尚",
+					"user":"薛之谦",
+					"special":"高尚",
+					"sq" : "true",
+					"movie":"true"
+				}
+			]
+		},
+		{
+			"name":"",
+			"src":"../../static/musiclist/6.jpg",
+			"desc":"吉他|气疯的日子流撒飘飘心情",
+			"user":"秋风",
+			"collect":14633,
+			"comment":434,
+			"share"	:80,
+			"musiclist":[
+				{
+					"name":"高尚",
+					"user":"薛之谦",
+					"special":"高尚",
+					"sq" : "true",
+					"movie":"true"
+				}
+			]
+		},
+		{
+			"name":"",
+			"src":"../../static/musiclist/7.jpg",
+			"desc":"吉他|气疯的日子流撒飘飘心情",
+			"user":"秋风",
+			"collect":14633,
+			"comment":434,
+			"share"	:80,
+			"musiclist":[
+				{
+					"name":"高尚",
+					"user":"薛之谦",
+					"special":"高尚",
+					"sq" : "true",
+					"movie":"true"
+				}
+			]
+		},
+		{
+			"name":"",
+			"src":"../../static/musiclist/8.jpg",
+			"desc":"吉他|气疯的日子流撒飘飘心情",
+			"user":"秋风",
+			"collect":14633,
+			"comment":434,
+			"share"	:80,
+			"musiclist":[
+				{
+					"name":"高尚",
+					"user":"薛之谦",
+					"special":"高尚",
+					"sq" : "true",
+					"movie":"true"
+				}
+			]
+		},
+		{
+			"name":"",
+			"src":"../../static/musiclist/9.jpg",
+			"desc":"吉他|气疯的日子流撒飘飘心情",
+			"user":"秋风",
+			"collect":14633,
+			"comment":434,
+			"share"	:80,
+			"musiclist":[
+				{
+					"name":"高尚",
+					"user":"薛之谦",
+					"special":"高尚",
+					"sq" : "true",
+					"movie":"true"
+				}
+			]
+		}
+	]
+}
