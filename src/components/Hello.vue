@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div style="width: 100%;height: 100%;">
     <div class="hello-wrapper" ref="helloWrapper">
       <div class="hello">
         <div class="swipe-wrapper">
@@ -55,16 +55,17 @@
           <musictitle :info="info" ></musictitle>
           <ul class="list-ul">
             <li v-for="item in music" @click="openmenuTotal(item)">
-              <img v-lazy="item.src" alt=""/>
+              <img v-lazy="item.coverImgUrl" alt=""/>
               <div class="item-content">
-                {{item.desc}}
+                {{item.name}}
               </div>
             </li>
           </ul>
         </div>
       </div>
     </div>
-    <musicmenu ref="musicmenu"></musicmenu>
+    <musicmenu ref="musicmenu" v-on:openmusicsong="show"></musicmenu>
+    <Musicsong ref="musicsong"></Musicsong>
   </div>
 </template>
 
@@ -73,7 +74,9 @@
   import BScroll from 'better-scroll';
   import Musictitle from './Musictitle/Musictitle.vue';
   import Musicmenu from './Musicmenu/Musicmenu.vue';
-  import data from '../../data.json';
+  import Musicsong from './Musicsong/Musicsong.vue';
+//  import data from '../../data.json';
+  import api from '../api';
   export default {
     name: 'hello',
     data() {
@@ -82,54 +85,22 @@
         info: {
           src: '../../../static/img/aei.png',
           content: '推荐歌单'
-        },
-        imgUrl: [
-          {
-            src: '../../static/musiclist/1.jpg',
-            desc: '吉他|气疯的日子流撒飘飘心情'
-          },
-          {
-            src: '../../static/musiclist/2.jpg',
-            desc: '超炫夜店音乐轰炸全场'
-          },
-          {
-            src: '../../static/musiclist/3.jpg',
-            desc: '神级中外歌曲互翻唱'
-          },
-          {
-            src: '../../static/musiclist/4.jpg',
-            desc: 'PopDanthology【全系列】'
-          },
-          {
-            src: '../../static/musiclist/5.jpg',
-            desc: '无前奏英文歌一秒沦陷'
-          },
-          {
-            src: '../../static/musiclist/6.jpg',
-            desc: '话语|那些温暖男生听起来总让人心疼'
-          },
-          {
-            src: '../../static/musiclist/7.jpg',
-            desc: '【环球唱片竞选】100首最佳运动BGM'
-          },
-          {
-            src: '../../static/musiclist/8.jpg',
-            desc: '精选50首出动神经的吉他弹唱'
-          },
-          {
-            src: '../../static/musiclist/9.jpg',
-            desc: '精选男女混声电子给你不一样的听觉盛宴'
-          }
-        ]
+        }
       };
     },
     created() {
-      this.$nextTick(() => {
-        this._initScroll();
-      });
-      this.music = data.music;
+      this.get();
+//      this.music = data.music;
     },
     methods: {
+      get() {
+        this.$http.get(api.getPlayListByWhere('全部', 'hot', 0, true, 9)).then((res) => {
+          this.music = res.data.playlists;
+          this.$nextTick(() => {
+            this._initScroll();
+          });
+        });
+      },
       _initScroll() {
         if (!this.helloScroll) {
           this.helloScroll = new BScroll(this.$refs.helloWrapper, {
@@ -142,13 +113,17 @@
       openmenuTotal: function (item) {
         this.$refs.musicmenu.show();
         this.$refs.musicmenu.setmusiclist(item);
+      },
+      show: function (item) {
+        this.$refs.musicsong.show(item);
       }
     },
     components: {
       Swipe,
       SwipeItem,
       Musictitle,
-      Musicmenu
+      Musicmenu,
+      Musicsong
     }
   };
 </script>
@@ -159,13 +134,9 @@
   img[lazy=error]
     transition: all 0.5s
     width: 100%
-    height: 0
-    padding-top: 100%
   img[lazy=loading]
     transition: all 0.5s
     width: 100%
-    height: 0
-    padding-top: 100%
   img[lazy=loaded]
     transition: all 0.5s
     width: 100%
@@ -178,7 +149,7 @@
   .hello-wrapper
     width: 100%
     position: absolute
-    top:41px
+    top:87px
     bottom:0
     overflow: hidden
     background:#fff

@@ -6,6 +6,7 @@ var proxyMiddleware = require('http-proxy-middleware')
 var webpackConfig = process.env.NODE_ENV === 'testing'
 	? require('./webpack.prod.conf')
 	: require('./webpack.dev.conf')
+var api = require('../node_modules/musicapi');
 
 // default port where dev server listens for incoming traffic
 var port = process.env.PORT || config.dev.port
@@ -15,14 +16,61 @@ var proxyTable = config.dev.proxyTable
 
 var app = express()
 
+
+app.get('/key/:key', function (req, res) {
+  var seller = {
+    name: req.params.key
+  };
+  var Res = res;
+  api.search(req.params.key, function (err, res, body) {
+    if (err) console.error(err);
+    if (res.statusCode === 200) {
+      Res.json({
+        error: 0,
+        data: body,
+        code: 200
+      });
+    }
+  });
+});
+app.get('/detail/:key', function (req, res) {
+  var seller = {
+    name: req.params.key
+  };
+  var Res = res;
+  api.id(req.params.key, 'song', function (err, res, body) {
+    if (err) console.error(err);
+    if (res.statusCode === 200) {
+      Res.json({
+        error: 0,
+        data: body,
+        code: 200
+      });
+    }
+  });
+});
+// app.get('/get/:key', function(req, res){
+//   var seller = {
+//     name: req.params.key
+//   };
+//   res.json({
+// 		error: 0,
+// 		data: seller
+// 	});
+// });
 // var appData = require('../data.json');
 // var seller = appData.seller;
 // var goods = appData.goods;
 // var ratings = appData.ratings;
 
 // var apiRoutes = express.Router();
-
-// apiRoutes.get('/seller', function (req, res) {
+//
+// apiRoutes.get('/key', function (req, res) {
+//   console.log(11);
+//   var seller = {
+//     name: req.params.key
+//   };
+//   console.log(req.params.key);
 // 	res.json({
 // 		error: 0,
 // 		data: seller
@@ -43,7 +91,7 @@ var app = express()
 // 	});
 // });
 
-// app.use('/api', apiRoutes);
+// app.use('/', apiRoutes);
 
 var compiler = webpack(webpackConfig)
 

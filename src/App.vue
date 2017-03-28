@@ -1,6 +1,7 @@
 <template>
   <div id="app">
     <header>
+      <musicsearch v-on:musicsearch="showsong"></musicsearch>
       <ul>
         <li class="head-li" @click="move('/')">个性推荐</li>
         <li class="head-li" @click="move('/music')">歌单</li>
@@ -9,13 +10,12 @@
       </ul>
       <div class="bar" :class="Classmove"></div>
     </header>
-    <router-view ></router-view>
-
+    <router-view ref="menu"></router-view>
   </div>
 </template>
 
 <script>
-
+import musicsearch from './components/musicsearch/musicsearch';
 export default {
   data() {
     return {
@@ -24,6 +24,10 @@ export default {
     };
   },
   methods: {
+    showsong(item) {
+      console.log(11);
+      this.$refs.menu.show(item);
+    },
     move: function (val) {
       console.log(val);
       if (val === '/') {
@@ -42,7 +46,7 @@ export default {
     }
   },
   components: {
-
+    musicsearch
   }
 };
 </script>
@@ -54,7 +58,6 @@ export default {
   -moz-osx-font-smoothing: grayscale
   color: #2c3e50
   header
-    font-size:0
     ul
       display: flex
       .head-li

@@ -2,6 +2,7 @@
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue';
 import App from './App';
+import Axios from './utils/diyaxios';
 import Router from 'vue-router';
 import Music from './components/Music';
 import Rank from './components/Rank';
@@ -18,8 +19,8 @@ NProgress.configure({ easing: 'ease', speed: 500, showSpinner: false });
 
 Vue.use(VueLazyload, {
   preLoad: 1.3,
-  error: '../static/img/error.jpg',
-  loading: '../static/img/loading.gif',
+  error: './static/img/error.jpg',
+  loading: './static/img/loading.png',
   attempt: 1,
   listenEvents: [ 'scroll', 'mousewheel' ]
 });
@@ -53,6 +54,8 @@ router.afterEach(() => {
   NProgress.done();
 });
 
+/* http */
+Vue.prototype.$http = Axios;
 /* eslint-disable no-new */
 new Vue({
   el: '#app',

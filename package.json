@@ -1,8 +1,8 @@
 {
-  "name": "sell",
+  "name": "musiccloudWebapp",
   "version": "1.0.0",
-  "description": "sell app",
-  "author": "ustbhuangyi <280309453@qq.com>",
+  "description": "musiccloudWebapp",
+  "author": "qiufeng <461249104@qq.com>",
   "private": true,
   "scripts": {
     "dev": "node build/dev-server.js",
@@ -11,6 +11,7 @@
     "lint": "eslint --ext .js,.vue src test/unit/specs test/e2e/specs"
   },
   "dependencies": {
+    "axios": "^0.15.3",
     "vue": "^2.2.1",
     "vue-router": "^2.2.0",
     "vue-resource": "^1.0.1",
