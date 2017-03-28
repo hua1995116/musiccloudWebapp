@@ -1,4 +1,4 @@
-## Build Setup
+#musiccloudWebapp
 
 # install dependencies
 npm install
@@ -8,3 +8,5 @@ npm run dev
 
 # build for production with minification
 npm run build
+
+look at [This link](http://qiufengh.com:8080/)
