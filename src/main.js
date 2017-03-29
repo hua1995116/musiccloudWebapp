@@ -7,7 +7,7 @@ import Router from 'vue-router';
 import Music from './components/Music';
 import Rank from './components/Rank';
 import Station from './components/Station';
-import Hello from './components/Hello';
+import Index from './components/Index';
 import NProgress from 'nprogress';
 import 'nprogress/nprogress.css';
 
@@ -28,7 +28,7 @@ Vue.use(Router);
 
 const routes = [{
   path: '/',
-  component: Hello
+  component: Index
 }, {
   path: '/music',
   component: Music

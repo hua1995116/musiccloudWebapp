@@ -472,12 +472,20 @@
           span
             color: #333
   @-webkit-keyframes rotating{
-    0% { -webkit-transform:rotate(0deg); }
-    100% { -webkit-transform:rotate(360deg); }
+    0% {
+      -webkit-transform:rotate(0deg)
+    }
+    100% {
+      -webkit-transform:rotate(360deg)
+    }
   }
   @keyframes rotating {
-    0% { transform: rotate(0deg);}
-    100% { transform: rotate(360deg);}
+    0% {
+      transform: rotate(0deg)
+    }
+    100% {
+      transform: rotate(360deg)
+    }
   }
   .cd-rotate
     -webkit-animation: rotating 10s  linear .3s infinite

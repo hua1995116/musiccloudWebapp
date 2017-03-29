@@ -1,4 +1,4 @@
-#musiccloudWebapp
+## Build Setup
 
 # install dependencies
 npm install
@@ -8,5 +8,3 @@ npm run dev
 
 # build for production with minification
 npm run build
-
-The online demo [http://qiufengh.com:8080/](http://qiufengh.com:8080/)
