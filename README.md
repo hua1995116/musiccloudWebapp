@@ -9,7 +9,7 @@
 ### build for production with minification
 > npm run build
 
-effect picture
+
 ![Image text](https://github.com/hua1995116/musiccloudWebapp/blob/master/resource/1.gif)
 ![Image text](https://github.com/hua1995116/musiccloudWebapp/blob/master/resource/2.gif)
 ![Image text](https://github.com/hua1995116/musiccloudWebapp/blob/master/resource/3.gif)
