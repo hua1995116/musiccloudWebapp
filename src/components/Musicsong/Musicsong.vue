@@ -106,12 +106,15 @@
         },
         song: {},
         audiourl: '',
-        albumPic: '',
-        songname: '',
+        albumPic: '../../../static/img/placeholder_disk_play_song.png',
+        songname: '暂无歌曲',
         list: []
       };
     },
     created() {
+      this.$nextTick(() => {
+        this.canPlaySong();
+      });
     },
     methods: {
       pre() {
@@ -132,17 +135,12 @@
       },
       _initScroll() {
         if (!this.songlistScroll) {
-          console.log(this.$refs.songlistWrapper);
           this.songlistScroll = new BScroll(this.$refs.songlistWrapper, {
-            probeType: 3,
             click: true
           });
         } else {
           this.songlistScroll.refresh();
         }
-        this.songlistScroll.on('scroll', (pos) => {
-          console.log(Math.abs(Math.round(pos.y)));
-        });
       },
       nulllist() {
         this.list.splice(0, this.list.length);
@@ -187,6 +185,9 @@
         this.name = item.name;
         if (item.audiosrc !== undefined) {
           this.audiourl = item.audiosrc;
+          this.$nextTick(() => {
+            this.canPlaySong();
+          });
         } else {
           this.get(item);
         }
@@ -214,7 +215,7 @@
         this.showFlag = false;
       },
       togglePlay() {
-        if (!this.playing) {
+        if (this.playing === false) {
           document.getElementById('audioPlay').pause();
           this.playing = true;
         } else {
@@ -230,12 +231,12 @@
           this.tipshow = true;
         } else {
           this.tipshow = false;
-        }
-        this.mwidth = time / timelength * 100;
-        this.time.start = changeTime(time);
-        this.time.end = changeTime(timelength);
-        if (timelength === time) {
-          this.togglePlay();
+          this.mwidth = time / timelength * 100;
+          this.time.start = changeTime(time);
+          this.time.end = changeTime(timelength);
+          if (timelength === time) {
+            this.togglePlay();
+          }
         }
       }
     },

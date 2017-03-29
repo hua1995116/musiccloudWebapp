@@ -121,17 +121,18 @@ export default{
     },
     openmusicsong(index, item) {
       this.number = index;
+      var obj;
       if (item) {
-
+        obj = {
+          id: item.id,
+          migUrl: item.al.picUrl,
+          name: item.ar[0].name,
+          songname: item.name
+        };
       } else {
-        item = null;
+        obj = null;
       }
-      var obj = {
-        id: item.id,
-        migUrl: item.al.picUrl,
-        name: item.ar[0].name,
-        songname: item.name
-      };
+
       this.$emit('openmusicsong', obj);
     },
     setmusiclist(item) {

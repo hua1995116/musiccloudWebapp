@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <header>
-      <musicsearch v-on:musicsearch="showsong"></musicsearch>
+      <musicsearch v-on:musicsearch="showsong" v-on:openmusicsong="showsong"></musicsearch>
       <ul>
         <li class="head-li" @click="move('/')">个性推荐</li>
         <li class="head-li" @click="move('/music')">歌单</li>

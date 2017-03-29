@@ -7,7 +7,7 @@
       </div>
       <div class="music" @click="hidelist">
         <span v-show="lshow">取消</span>
-        <img src="../../../static/img/ph.png" alt="" v-show="!lshow">
+        <img src="../../../static/img/ph.png" alt="" v-show="!lshow" @click="openmusicsong">
       </div>
     </div>
     <div class="searchresult" v-show="lshow">
@@ -51,7 +51,12 @@ export default{
       this.lshow = true;
     },
     hidelist() {
+      document.getElementById('inputvalue').value = '';
       this.lshow = false;
+    },
+    openmusicsong() {
+      var obj = null;
+      this.$emit('openmusicsong', obj);
     },
     opensong(item) {
       if (item) {
