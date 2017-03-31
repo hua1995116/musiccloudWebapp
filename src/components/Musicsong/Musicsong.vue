@@ -30,7 +30,7 @@
             <span></span>
           </div>
           <div class="progress">
-            <progressslider :mwidth="mwidth"></progressslider>
+            <progressslider :mwidth="mwidth" @change="setTime"></progressslider>
             <div class="time">
               <span id="cur">{{time.start}}</span>
               <span id="total">{{time.end}}</span>
@@ -190,6 +190,7 @@
           });
         } else {
           this.get(item);
+          this.canPlaySong();
         }
       },
       canPlaySong() {
@@ -203,6 +204,7 @@
             console.log('歌曲加载错误');
           } else {
             this.audiourl = res.data.data[0].url;
+            this.canPlaySong();
             this.$nextTick(() => {
               this.canPlaySong();
             });
@@ -238,6 +240,11 @@
             this.togglePlay();
           }
         }
+      },
+      setTime(value) {
+        var myaudio = document.getElementById('audioPlay');
+        var timelength = myaudio.duration;
+        myaudio.currentTime = timelength * value / 100;
       }
     },
     components: {
