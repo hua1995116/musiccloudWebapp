@@ -11,6 +11,7 @@ import Index from './components/Index';
 import NProgress from 'nprogress';
 import 'nprogress/nprogress.css';
 
+import '../static/css/reset.css';
 import 'vue-swipe/dist/vue-swipe.css';
 import VueLazyload from 'vue-lazyload';
 

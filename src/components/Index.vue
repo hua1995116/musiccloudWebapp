@@ -86,7 +86,7 @@
       return {
         music: {},
         info: {
-          src: '../../../static/img/aei.png',
+          src: './static/img/aei.png',
           content: '推荐歌单'
         },
         loading: false
