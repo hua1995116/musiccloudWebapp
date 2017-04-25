@@ -14,4 +14,4 @@
 ![Image text](https://github.com/hua1995116/musiccloudWebapp/blob/master/resource/2.gif)
 ![Image text](https://github.com/hua1995116/musiccloudWebapp/blob/master/resource/3.gif)
 
-Online address [http://qiufengh.com:8080/](http://qiufengh.com:8080/)
+Online address [http://www.qiufengh.com/#/](http://www.qiufengh.com/#/)
