@@ -5,28 +5,28 @@
         <div class="swipe-wrapper">
           <swipe class="my-swipe">
             <swipe-item class="slide1">
-              <img src="../assets/1.png" alt="">
+              <img src="http://ozt4jt8av.bkt.clouddn.com/1df.png" alt="">
             </swipe-item>
             <swipe-item class="slide2">
-              <img src="../assets/2.png" alt="">
+              <img src="http://ozt4jt8av.bkt.clouddn.com/2ds.png" alt="">
             </swipe-item>
             <swipe-item class="slide3">
-              <img src="../assets/3.png" alt="">
+              <img src="http://ozt4jt8av.bkt.clouddn.com/3ds.png" alt="">
             </swipe-item>
             <swipe-item class="slide3">
-              <img src="../assets/4.png" alt="">
+              <img src="http://ozt4jt8av.bkt.clouddn.com/4fd.png" alt="">
             </swipe-item>
             <swipe-item class="slide3">
-              <img src="../assets/5.png" alt="">
+              <img src="http://ozt4jt8av.bkt.clouddn.com/5ds.png" alt="">
             </swipe-item>
             <swipe-item class="slide3">
-              <img src="../assets/6.png" alt="">
+              <img src="http://ozt4jt8av.bkt.clouddn.com/6ds.png" alt="">
             </swipe-item>
             <swipe-item class="slide3">
-              <img src="../assets/7.png" alt="">
+              <img src="http://ozt4jt8av.bkt.clouddn.com/7ds.png" alt="">
             </swipe-item>
             <swipe-item class="slide3">
-              <img src="../assets/8.png" alt="">
+              <img src="http://ozt4jt8av.bkt.clouddn.com/8ds.png" alt="">
             </swipe-item>
           </swipe>
         </div>
@@ -219,12 +219,12 @@
           margin-top: 5px
       .card-li:nth-child(1)
         .circle
-          background: url(../assets/FM.png) no-repeat
+          background: url(http://ozt4jt8av.bkt.clouddn.com/FM.png) no-repeat
           background-size:50px 50px
           background-position: center
       .card-li:nth-child(3)
         .circle
-          background: url(../assets/ph.png) no-repeat
+          background: url(http://ozt4jt8av.bkt.clouddn.com/ph.png) no-repeat
           background-size:50px 50px
           background-position: center
     .music-list

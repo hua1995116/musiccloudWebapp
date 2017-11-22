@@ -5,28 +5,28 @@
         <div class="swipe-wrapper">
           <swipe class="my-swipe">
             <swipe-item class="slide1">
-              <img src="../assets/1.png" alt="">
+              <img src="http://ozt4jt8av.bkt.clouddn.com/1.png" alt="">
             </swipe-item>
             <swipe-item class="slide2">
-              <img src="../assets/2.png" alt="">
+              <img src="http://ozt4jt8av.bkt.clouddn.com/2.png" alt="">
             </swipe-item>
             <swipe-item class="slide3">
-              <img src="../assets/3.png" alt="">
+              <img src="http://ozt4jt8av.bkt.clouddn.com/3.png" alt="">
             </swipe-item>
             <swipe-item class="slide3">
-              <img src="../assets/4.png" alt="">
+              <img src="http://ozt4jt8av.bkt.clouddn.com/4.png" alt="">
             </swipe-item>
             <swipe-item class="slide3">
-              <img src="../assets/5.png" alt="">
+              <img src="http://ozt4jt8av.bkt.clouddn.com/5.png" alt="">
             </swipe-item>
             <swipe-item class="slide3">
-              <img src="../assets/6.png" alt="">
+              <img src="http://ozt4jt8av.bkt.clouddn.com/6.png" alt="">
             </swipe-item>
             <swipe-item class="slide3">
-              <img src="../assets/7.png" alt="">
+              <img src="http://ozt4jt8av.bkt.clouddn.com/7.png" alt="">
             </swipe-item>
             <swipe-item class="slide3">
-              <img src="../assets/8.png" alt="">
+              <img src="http://ozt4jt8av.bkt.clouddn.com/8.png" alt="">
             </swipe-item>
           </swipe>
         </div>
